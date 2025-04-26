@@ -4,6 +4,7 @@ import { Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
 import { ConfigProvider } from "antd";
 import { JSX } from "react";
+import { Analytics } from "@vercel/analytics/next";
 
 // Elegant serif font for headings
 const playfair = Playfair_Display({
@@ -63,6 +64,7 @@ export default function RootLayout({
           }}
         >
           {children}
+          <Analytics />
         </ConfigProvider>
       </body>
     </html>
